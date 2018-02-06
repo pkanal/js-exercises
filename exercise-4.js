@@ -6,7 +6,9 @@
 const numbers = [1, 2, 3, 4, 5];
 
 const reduce = (array, fn, init) => {
-  // your solution here
+  return array.length > 0
+    ? reduce(array.slice(1), fn, fn(init, array[0]))
+    : init;
 };
 
 const sum = (acc, val) => acc + val;

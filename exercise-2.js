@@ -3,9 +3,12 @@
 
 const someWords = ["apple", "banana", "apple", "durian", "durian", "durian"];
 
-const countWords = words => {
-  // your solution here
-};
+const countWords = words =>
+  words.reduce((wordCounts, word) => {
+    return wordCounts.hasOwnProperty(word)
+      ? { ...wordCounts, [word]: wordCounts[word] + 1 }
+      : { ...wordCounts, [word]: 1 };
+  }, {});
 
 console.log(countWords(someWords));
 // {

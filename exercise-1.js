@@ -11,9 +11,14 @@ const flavours = [
   "Overcooked Cabbage"
 ];
 
-const transformStrings = array => {
-  // your solution here
-};
+const reverseString = str =>
+  str
+    .split("")
+    .reverse()
+    .join("");
+
+const transformStrings = array =>
+  array.filter(str => str.length <= 20).map(reverseString);
 
 console.log(transformStrings(flavours));
 
