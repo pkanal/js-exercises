@@ -2,9 +2,7 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
-const map = (array, fn) => {
-  // your solution here
-};
+const map = (array, fn) => array.reduce((acc, num) => acc.concat(fn(num)), []);
 
 const double = x => x * 2;
 
