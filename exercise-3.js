@@ -2,8 +2,13 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
+// array is numbers, fn is double function
+
 const map = (array, fn) => {
-  // your solution here
+
+  return numbers.reduce((acc, curr) => {
+
+  }, []);
 };
 
 const double = x => x * 2;

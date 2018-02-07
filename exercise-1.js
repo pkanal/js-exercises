@@ -12,8 +12,11 @@ const flavours = [
 ];
 
 const transformStrings = array => {
-  return array.reduce((acc, curr) => {
-      return (curr.length <= 20) ? acc.concat(curr) : acc;
+  return array.reduce((acc, flavour) => {
+      return (flavour.length <= 20) ?
+      // if flavour.length is <= 20, we want to reverse it, then add it to an array
+      acc.concat(flavour.split('').reverse().join(''))
+       : acc;
   }, []);
 
 };
