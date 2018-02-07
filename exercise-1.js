@@ -11,9 +11,9 @@ const flavours = [
   "Overcooked Cabbage"
 ];
 
-const transformStrings = array => {
-  // your solution here
-};
+const maxSize = 28;
+
+const transformStrings = array => array.filter(entry => entry.length <= maxSize).map(entry => entry.split("").reverse().join(""));
 
 console.log(transformStrings(flavours));
 
