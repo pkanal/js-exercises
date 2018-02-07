@@ -5,6 +5,10 @@ const someWords = ["apple", "banana", "apple", "durian", "durian", "durian"];
 
 const countWords = words => {
   // your solution here
+  return words.reduce((tally, fruit) => {
+      tally[fruit] = (tally[fruit] || 0) + 1;
+      return tally;
+  }, {});
 };
 
 console.log(countWords(someWords));
