@@ -2,14 +2,7 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
-const map = (array, fn) => {
-  return array.reduce(
-    (accum, curr) => {
-      accum.push(fn(curr));
-      return accum;
-    }
-    , [])
-};
+const map = (array, fn) => array.reduce((accum, curr) => accum.concat(fn(curr)), []);
 
 const double = x => x * 2;
 
