@@ -23,7 +23,7 @@ const map = (array, fn) => {
   return array.reduce((acc, val) => {
     //https://docs.microsoft.com/en-us/scripting/javascript/reference/spread-operator-decrement-dot-dot-dot-javascript
     // return acc.concat(fn(val));
-    // so refactored to this:
+    // Thanks to Caroline Golinski's tip, so refactored to this:
     return [...acc, fn(val)]
   }, []);
 };
