@@ -2,18 +2,23 @@
 // only returns strings with 20 characters or less reversed.
 
 const flavours = [
-  "Cranberry",
-  "Strawberry and Peanut-Butter Ice-Cream",
-  "Dirty Sock",
-  "Beef Casserole",
-  "Peppermint",
-  "Earwax",
-  "Overcooked Cabbage"
+  'Cranberry',
+  'Strawberry and Peanut-Butter Ice-Cream',
+  'Dirty Sock',
+  'Beef Casserole',
+  'Peppermint',
+  'Earwax',
+  'Overcooked Cabbage'
 ];
 
-const transformStrings = array => {
-  // your solution here
-};
+const transformStrings = array =>
+  array.filter(string => string.length <= 20).map(string =>
+    string
+      .split('')
+      .reverse()
+      .join('')
+  );
+// your solution here
 
 console.log(transformStrings(flavours));
 

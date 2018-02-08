@@ -3,6 +3,9 @@
 const numbers = [1, 2, 3, 4, 5];
 
 const map = (array, fn) => {
+  return array.reduce((acc, curr) => {
+    return [...acc, fn(curr)];
+  }, []);
   // your solution here
 };
 
