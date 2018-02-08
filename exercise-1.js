@@ -12,7 +12,7 @@ const flavours = [
 ];
 
 const transformStrings = array => {
-  // your solution here
+  array.filter(word=>word.length<20).reverse();
 };
 
 console.log(transformStrings(flavours));
