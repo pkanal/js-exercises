@@ -5,8 +5,10 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
-const reduce = (array, fn, init) => {
-  // your solution here
+const reduce = (array, fn, initialVal) => {
+  return array.reduce((acc, num) => {
+    return fn(acc, num);
+  }, initialVal);
 };
 
 const sum = (acc, val) => acc + val;
