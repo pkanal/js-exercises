@@ -5,7 +5,14 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
-const reduce = (array, fn, init) => array.reduce((accum, curr) => fn(accum, curr), init);
+const reduce = (array, fn, init) => {
+  if (array.length === 0) {
+    return init;
+  }
+
+  let subtotal = fn(init, array[0]);
+  return reduce(array.slice(1), fn, subtotal);
+};
 
 const sum = (acc, val) => acc + val;
 
