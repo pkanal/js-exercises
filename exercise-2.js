@@ -5,8 +5,8 @@ const someWords = ["apple", "banana", "apple", "durian", "durian", "durian"];
 
 const countWords = words => words.reduce(
   (accum, curr) => {
-    accum[curr.toString()] = accum[curr.toString()] || [];
-    accum[curr.toString()]++;
+    accum[curr] = accum[curr] || [];
+    accum[curr]++;
     return accum;
   }
   , {})
