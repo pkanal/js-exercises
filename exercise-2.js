@@ -4,8 +4,18 @@
 const someWords = ["apple", "banana", "apple", "durian", "durian", "durian"];
 
 const countWords = words => {
-  // your solution here
+    return words.reduce((acc, curr) => {
+        if(curr in acc){
+            console.log(curr)
+            acc[curr] ++;
+        }
+        else{
+            acc[curr] = 1;
+        };
+        return acc;
+    },{});
 };
+
 
 console.log(countWords(someWords));
 // {

@@ -5,8 +5,15 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
+// array.reduce((acc, curr) => {
+//  return
+// }, init )
 const reduce = (array, fn, init) => {
-  // your solution here
+    if (!array.length) {
+        return init;
+    }
+    let total = fn(init, array[0]);
+    return reduce(array.splice(1, array.length), fn, total)
 };
 
 const sum = (acc, val) => acc + val;

@@ -12,7 +12,9 @@ const flavours = [
 ];
 
 const transformStrings = array => {
-  // your solution here
+  return array.reduce((acc, curr) => {
+    return curr.length <= 20 ? [...acc, curr.split('').reverse().join('')] : acc;
+  },[])
 };
 
 console.log(transformStrings(flavours));
