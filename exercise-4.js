@@ -5,8 +5,13 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
+
 const reduce = (array, fn, init) => {
-  // your solution here
+  if (array.length > 0) {
+    let newInit = fn(init, array.shift())
+    return reduce(array, fn, newInit)
+  }
+  return init;
 };
 
 const sum = (acc, val) => acc + val;
