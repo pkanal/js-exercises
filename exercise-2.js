@@ -4,7 +4,11 @@
 const someWords = ["apple", "banana", "apple", "durian", "durian", "durian"];
 
 const countWords = words => {
-  // your solution here
+  return words.reduce((countingObject,word)=>{
+     countingObject[word] = countingObject[word] || 0;
+     countingObject[word]+=1;
+     return countingObject;
+  },{})
 };
 
 console.log(countWords(someWords));
