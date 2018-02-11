@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/bridge-school/js-exercises#readme",
   "devDependencies": {
-    "jest": "^22.1.4"
+    "jest": "^22.2.2"
   }
 }
