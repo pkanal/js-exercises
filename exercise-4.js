@@ -6,11 +6,8 @@
 const numbers = [1, 2, 3, 4, 5];
 
 const reduce = (array, fn, init) => {
-  let total = init;
-  for (i=0; i<array.length; i++){
-    total = fn(total, array[i]);
-  }
-  return total;
+    if(array.length) {return reduce(array.slice(1), fn, fn(init, array[0]));}
+    else {return init;}
 };
 
 const sum = (acc, val) => acc + val;
