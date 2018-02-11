@@ -6,11 +6,13 @@
 const numbers = [1, 2, 3, 4, 5];
 
 const reduce = (array, fn, init) => {
-  // your solution here
+  let total = init;
+  for (i=0; i<array.length; i++){
+    total = fn(total, array[i]);
+  }
+  return total;
 };
 
 const sum = (acc, val) => acc + val;
 
-console.log(reduce(numbers, sum, 0)); // 15 666
-
-module.exports = reduce;
+console.log(reduce(numbers, sum, 0)); // 15
