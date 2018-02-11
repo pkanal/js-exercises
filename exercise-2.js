@@ -5,13 +5,11 @@ const someWords = ["apple", "banana", "apple", "durian", "durian", "durian"];
 
 const countWords = words => {
   // your solution here
+  return words.reduce((acc, curr) => {
+    acc.hasOwnProperty(curr) ? acc[curr]++ : acc[curr] = 1;
+    return acc;
+  }, {});
 };
-
 console.log(countWords(someWords));
-// {
-//   apple: 2,
-//   banana: 1,
-//   durian: 3,
-// }
 
 module.exports = countWords;
