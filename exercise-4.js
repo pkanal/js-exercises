@@ -7,6 +7,13 @@ const numbers = [1, 2, 3, 4, 5];
 
 const reduce = (array, fn, init) => {
   // your solution here
+  // base case
+  if (array.length === 0){
+    return init;
+  }
+
+  // recursive case
+  return reduce(array.slice(1), fn, fn(init, array[0]));
 };
 
 const sum = (acc, val) => acc + val;
